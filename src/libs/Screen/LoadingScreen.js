@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import {View, ActivityIndicator, Image, StyleSheet, Alert, Text} from 'react-native';
-import Screen from "../Screen";
+import {View, ActivityIndicator, Image, StyleSheet} from 'react-native';
 import configs from "../../configs/application";
 
-export default class LoadingScreen extends Screen {
+export default class LoadingScreen extends Component {
     static navigationOptions = {
         header: null,
     };
@@ -14,7 +13,7 @@ export default class LoadingScreen extends Screen {
     render() {
         return (
             <View style={styles.container}>
-                <Image style={{width: 120, height: 120, marginBottom: 100}}
+                <Image style={{width: 120, height: 100, marginBottom: 100}}
                        source={configs.logo}/>
                 <ActivityIndicator size={configs.spinnerSize} color="#0000ff" />
             </View>
