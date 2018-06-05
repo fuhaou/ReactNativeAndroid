@@ -1,7 +1,7 @@
 {
-  "name": "$package_name$",
+  "name": "src",
   "version": "0.0.1",
   "dependencies": {
-    $END$
+    
   }
 }

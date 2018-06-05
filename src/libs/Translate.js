@@ -1,5 +1,5 @@
-import locales from "../configs/locales";
-import configs from "../configs/application";
+import locales from "src/configs/locales";
+import configs from "src/configs/application";
 
 export function _(text) {
     if (!locales.hasOwnProperty(text)) {

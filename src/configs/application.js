@@ -1,4 +1,4 @@
-import release from './application/release';
+import release from 'src/configs/application/release';
 import {Platform} from 'react-native';
 const application = {
     spinnerSize : Platform.select({
@@ -7,7 +7,7 @@ const application = {
     }),
     language : 'vn', // 'en' or 'vn'
     appKey : 'eticket@sm',
-    logo: require('../app/assets/images/logo.png'),
+    logo: require('src/app/assets/images/logo.png'),
 };
 const configs = Object.assign({}, application, release);
 export default configs;

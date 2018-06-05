@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {View, ActivityIndicator, Image, StyleSheet} from 'react-native';
-import configs from "../../configs/application";
+import configs from "src/configs/application";
 
 export default class LoadingScreen extends Component {
     static navigationOptions = {

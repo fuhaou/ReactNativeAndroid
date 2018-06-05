@@ -1,6 +1,6 @@
-import Singleton from "./Singleton";
+import Singleton from "src/libs/Singleton";
 import {Alert} from "react-native";
-import {_} from './Translate';
+import {_} from 'src/libs/Translate';
 
 export default class JsonFetcher extends Singleton
 {

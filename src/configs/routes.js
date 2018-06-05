@@ -1,7 +1,7 @@
 import { StackNavigator } from 'react-navigation';
 
-import LoadingScreen from '../libs/Screen/LoadingScreen';
-import Screen from '../libs/Screen';
+import LoadingScreen from 'src/libs/Screen/LoadingScreen';
+import Screen from 'src/libs/Screen';
 
 export const AppNavigator = StackNavigator({
     'Home': { screen: Screen},
