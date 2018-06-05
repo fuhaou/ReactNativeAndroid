@@ -9,6 +9,7 @@ export default class LoadingScreen extends Screen {
     };
     constructor(props) {
         super(props);
+        this.handler().done();
     }
     render() {
         return (
@@ -19,6 +20,20 @@ export default class LoadingScreen extends Screen {
             </View>
         );
     }
+
+    async handler(customHandler)
+    {
+        let params = this.props.navigation.state.params ? this.props.navigation.state.params : {};
+        let goTo = params.goTo ? params.goTo : 'Home';
+        let preventDefault = false;
+        if (customHandler) {
+            preventDefault = await customHandler();
+        }
+        if (!preventDefault) {
+            this.replace(goTo, params);
+        }
+    }
+
     redirect(routeName, params = {})
     {
         this.props.navigation.navigate(routeName, params);
