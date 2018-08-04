@@ -2,10 +2,10 @@
 # ------------------------------------------------------------ #
 # INTALLING ENVIRONMENT ON UBUNTU
 # STEP 1 INSTALLING BASE MODULE
-sudo apt-get install nodejs
-sudo apt-get install npm
-sudo apt-get install yarn
-sudo apt-get install openjdk-8-jdk 
+sudo apt-get install nodejs -y
+sudo apt-get install npm -y
+sudo apt-get install yarn -y
+sudo apt-get install openjdk-8-jdk -y 
 sudo npm install -g react-native-cli
 
 # STEP 2 DOWNLOADING SDK 
@@ -14,6 +14,7 @@ sudo npm install -g react-native-cli
 # CREATE DIR ~/android-sdk
 # EXTRACT sdk-tools-linux-*.zip TO ~/android-sdk
 cd ~/android-sdk
+mkdir ~/.android
 touch ~/.android/repositories.cfg
 ./tools/bin/sdkmanager "platform-tools"
 ./tools/bin/sdkmanager --licenses
